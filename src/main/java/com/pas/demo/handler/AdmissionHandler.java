@@ -25,7 +25,7 @@ public class AdmissionHandler {
     public List<Admission> getAllAdmissions() {
         List<Admission> admissions = new ArrayList<>();
         String query = "SELECT a.admission_id, a.ur_no, a.doctor_id, a.procedure_id,"
-                + "a.admission_status, d.doctor_name, p.procedure_name "
+                + "a.admission_status, d.name, p.name"
                 + "FROM Admission a "
                 + "JOIN Doctor d ON a.doctor_id = d.doctor_id "
                 + "JOIN Procedure p ON a.procedure_id = p.procedure_id";

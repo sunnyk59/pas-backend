@@ -4,7 +4,8 @@ import java.sql.*;
 
 public class DAO {
 
-    private String url = "jdbc:postgresql://localhost:5432/pas";
+    //private String url = "jdbc:postgresql://localhost:5432/pas";
+    private String url = "jdbc:postgresql://host.docker.internal:5432/pas";
     private String user = "postgres";
     private String password = "password";
     private Connection conn = null;
@@ -60,7 +61,8 @@ public class DAO {
     }
 
     public static void main(String[] args) {
-        //DAO dao = new DAO(); 
+        DAO dao = new DAO(); 
+        System.out.println("This is the connection: "+dao.getConnection()); 
     }
 
 }
